@@ -8,23 +8,23 @@
 <body>
     <h1>Array for bok med en forfatter</h1>
     <ul>
-        <li>tittel: <span id="book1TitleSpan" ></span></li>
-            <li>Forfatter(e): <span id= "book1AuthorSpan"></span></li>
-            <li>Antall sider: <span id="book1PageCountSpan"></span></li>
+        <li>tittel: <span id = "book1TitleSpan" ></span></li>
+            <li>forfatter(e): <span id = "book1AuthorSpan"></span></li>
+            <li>antall sider: <span id = "book1PageCountSpan"></span></li>
     </ul>
 
     <h1> Array for bok med flere forfattere</h1>
     <ul>
-        <li>Tittel: <span id="book2TitleSpan>/span></li>
-        <li>Forfatter(e): <span id="book2AuthorSpan"></span></li>
-        <li>Antall sider: <span id="book2PageCountSpan"></span></li>
+        <li>tittel: <span id = "book2TitleSpan">/span></li>
+        <li>forfatter(e): <span id = "book2AuthorSpan"></span></li>
+        <li>antall sider: <span id = "book2PageCountSpan"></span></li>
     </ul>
         
     <h1>Objekt for bok</h1>
     <ul>
-        <li>Tittel: <span id="book3TitleSpan"></span></li>
-        <li>Forfatter(e): <span id="book3AuthorSpan"></span></li>
-        <li>Antall sider: <span id="book3PageCountSpan"></span></li>
+        <li>Tittel: <span id = "book3TitleSpan"></span></li>
+        <li>Forfatter(e): <span id = "book3AuthorSpan"></span></li>
+        <li>antall sider: <span id = "book3PageCountSpan"></span></li>
     </ul>
 
     <script>
@@ -54,7 +54,20 @@
         document.getElementById("book1TitleSpan").innerHTML = book1[0]
         document.getElementById("book1AuthorSpan").innerHTML = book[1]
         document.getElementById("book1PageCountSpan").innerHTML = book[2]
+
+        //Print info fra book2 til HTML:
+        document.getElementById("book2TitleSpan").innerHTML = book2[0]
+        document.getElementById("book2AuthorSpan").innerHTML = book2[1] + ", " + book[2]
+        document.getElementById("book2PageCountSpan").innerHTML = book[3]
+
+        //Print info fra book3 til HTML
+        //book3 er ett objekt, vi må derfor referere til nøkler istedet for indexer.
+        document.getElementById("book3TitleSpan").innerHTML = book3.title
+        document.getElementById("book3AuthorSpan").innerHTML = book3.author
+        document.getElementById("book3PageCountSpan").innerHTML = book3.pagecount
+
     </script>
+
 
 
 
