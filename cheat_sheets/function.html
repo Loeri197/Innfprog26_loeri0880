@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat sheet for functions</title>
+</head>
+<body>
+    <p>Hei, <span id="username">ikke-innlogget bruker</span></p>
+    <p>Hei, <span id="paramenter-username">ikke-innlogget bruker som paramenter</span></p>
+    <p>Hei, <span id="full-parameter-username">ikke-innlogget bruker, men utfylt parameter</span></p>
+
+    <script>
+        //Her skal vi lage verdens enkleste funksjon: den skriver ut ett navn
+        function printName() {
+            document.getElementById("username").innerHTML = "Louise"
+        }
+        printName()
+
+        //Lage en funksjon som tar imot navn som en parameter
+        function printParameterName(name) {
+            document.getelementById("parameter-username").innerHTML = name
+
+
+        }
+        printParameterName("Louise Eriksen")
+
+        //Lage en funksjon med standarverdi for en parameter
+        function printDefaultName(name = "brukernavn") {
+            document.getElementById("full-parameter-username").innerHTML = name
+
+        }
+        printDefaultName("Eriksen")
+
+        //Lage en funksjon som oppretter ett nytt HTML-element, og fylle dette med navn fra
+        //parameter før det skrives ut til HTML:
+        function printElementName(name = "Louise", htmltag = "h2") {
+            const element = document.createElement(htmltag)
+            element.innerHTML = name
+            document.body.appendChild(element)
+        }
+        printElementName()
+
+        
+
+    </script>
+</body>
+</html>
