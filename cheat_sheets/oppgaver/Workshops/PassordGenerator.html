@@ -24,14 +24,14 @@
     const tillatteTegn = "abcdefghijklmnopqrstuvwxyzæøåABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ0123456789"
 
 
-        document.getElementById("generer").addEventListener("click", function(event) {
+        document.getElementById("generer").addEventListener("click", function (event) {
         //Tøm passord-variabel for å gjøre klar til nytt passord:
         passord = ""
         //Hente ut hvor langt passordet skal være: 
             const passordLengde = document.getElementById("lengde").value
         //GENERER ETT PASSORD
         for(teller = 0; teller < passordLengde; teller++) { 
-            const tilfeldigTegn = Math.floor(Math.random() * tillatteTegn.lenght)
+            const tilfeldigTegn = Math.floor(Math.random() * tillatteTegn.length)
             console.log(tilfeldigTegn,tillatteTegn[tilfeldigTegn])
             passord += tillatteTegn[tilfeldigTegn]
 
