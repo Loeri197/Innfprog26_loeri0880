@@ -13,6 +13,7 @@
             <input type = "number" id="lengde" name="lengde" value="8" />
         </p>
         <p> Velg hvilke tegn passordet skal bestå av: </p>
+        <button onclick="checkAll()"
         <ul>
             <li><label><input type="checkbox" id="lowercase" checked /> Små bokstaver</label></li>
             <li><label><input type="checkbox" id="uppercase" /> Store bokstaver</label></li>
@@ -37,8 +38,18 @@
 
     let tillatteTegn = ""
 
+    function checkAll() {
+        document.getElementById("lowercase").checked = true
+        document.getElementById("uppercase").checked = true
+        document.getElementById("numbers").checked = true
+        document.getElementById("specialChars").checked = true
+
+    }
+
 
         document.getElementById("generer").addEventListener("click", function (event) {
+        //Tømme tillatteTegn for nytt utvalg: 
+        tillatteTegn = ""
         //Sjekke hvilke kategorier som er valgt, og gjøre disse klare for utvalget:
         //Finne verdi for checkbox: document.getElementById ("ID").checked
         if(document.getElementById("lowercase").checked === true) {
@@ -48,7 +59,7 @@
         document.getElementById("uppercase").checked ? tillatteTegn += uppercase : null
         document.getElementById("numbers").checked ? tillatteTegn += numbers : null
         document.getElementById("specialChars").checked ? tillatteTegn += SpecialChars : null
-        
+
         
         //Tøm passord-variabel for å gjøre klar til nytt passord:
         passord = ""
